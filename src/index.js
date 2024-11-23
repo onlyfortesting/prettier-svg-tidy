@@ -22,7 +22,7 @@ const parsers = {
             .map((c) => c[0].trim())
             .sort((a, b) => getAttributeOrder(a) - getAttributeOrder(b))
             .join(' ')
-          return `<${tag} ${res}>`
+          return `<${tag} ${res}${tag === 'svg' ? '' : ' /'}>`
         })
       })
 
